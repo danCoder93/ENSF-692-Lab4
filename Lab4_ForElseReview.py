@@ -3,7 +3,7 @@
 # Review of else statement in loops
 
 L = []  # Create a new list
-nmax = 50 # Maximum number we're going up to is 30
+nmax = 10 # Maximum number we're going up to is 30
 
 # Iterate from 2 up to 30
 for n in range(2, nmax):    # 2 to 30
@@ -22,3 +22,14 @@ for n in range(2, nmax):    # 2 to 30
         L.append(n)  # Add the current value of n to L if the inner loop finished all iterations without breaking
 
 print(L)  # Happens when all else is done!
+
+
+# trying error handling
+try:
+    3/0
+    if 3 == 3:
+        raise ValueError("The value don't match")
+except ValueError as e:
+    print("The error is " + str(e))
+except ZeroDivisionError as e:
+    print("Caught the division error later" + str(e))
